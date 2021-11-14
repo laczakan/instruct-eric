@@ -2,7 +2,7 @@
 Service catalogue
 
 ## API
-Routes are definied in [routes/web.php](blob/main/routes/web.php). Main class for service catalog api is [App\Http\Controllers\ServiceController.php](blob/main/app/Http/Controllers/ServiceController.php). 
+Routes are definied in [routes/web.php](routes/web.php). Main class for service catalog api is [App\Http\Controllers\ServiceController.php](app/Http/Controllers/ServiceController.php). 
 1. Clone repository:
 ```git clone URL```
 2. Start php dev server:
@@ -13,7 +13,7 @@ Routes are definied in [routes/web.php](blob/main/routes/web.php). Main class fo
  - POST http://localhost:8000/services, params: `Ref,Centre,Service,Country`
  
 ## CLI
-Commands for service catalog are in [app\Console\Commands](tree/main/App/Console/Commands). 
+Commands for service catalog are in [app\Console\Commands](https://github.com/laczakan/instruct-eric/tree/main/app/Console/Commands). 
 
 1. Get all services
 ```
