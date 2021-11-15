@@ -92,13 +92,14 @@ class ServiceController extends Controller
         foreach ($services as &$service) {
             // Compare Ref with value from POST
             if ($service["﻿Ref"] == $_POST['Ref']) {
-                // If the same Update all results: (Centre, Service, Country)
+                // If the same Update results: (Centre, Service, Country)
                 $exists = true;
                 $service['Centre'] = $_POST['Centre'];
                 $service['Service'] = $_POST['Service'];
                 $service['Country'] = $_POST['Country'];
             }
         }
+        // If different Update all results: (Ref, Centre, Service, Country)
         if (!$exists) {
             $services [] = [
                 "﻿Ref" => $_POST['Ref'],
@@ -108,6 +109,7 @@ class ServiceController extends Controller
             ];
         }
 
+        // To update or add to csv file
         $this->setArray($services);
 
         return response($services);

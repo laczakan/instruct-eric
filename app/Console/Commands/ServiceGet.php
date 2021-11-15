@@ -19,7 +19,7 @@ class ServiceGet extends Command
      *
      * @var string
      */
-    protected $description = 'Get all services from csv as array';
+    protected $description = 'Get specific service from csv as array. checking by countryCode';
 
     /**
      * Create a new command instance.
