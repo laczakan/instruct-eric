@@ -38,10 +38,12 @@ class ServiceController extends Controller
     {
         $csv = array_map('str_getcsv', file(storage_path('app/services.csv')));
 
+        // Open file with write attribute.
         $fp = fopen(storage_path('app/services.csv'), 'w');
 
         $services = [];
 
+        // Loop through array
         foreach ($tmp as $key => $value) {
             if ($key == 0) {
                 $columns = array_keys($value);
@@ -84,6 +86,7 @@ class ServiceController extends Controller
         return response($return);
     }
 
+    // Function to update or create new (saving also new csv file)
     public function addOrUpdate()
     {
         $services = $this->getArray();
